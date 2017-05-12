@@ -18,6 +18,10 @@ namespace IGEN_Storage_System_V1
         public int ZipCode{get; set;} 
         public int Role {get;set;}
         public int Rights {get;set;}
+        
+        public User()
+        {
+        }
 
 
         public void CreateUser()
