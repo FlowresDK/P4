@@ -1,0 +1,9 @@
+C:\Users\holbech\Desktop\P4 Project\IGEN_Storage_System_V1\IGEN_Storage_System_V1\bin\Debug\IGEN_Storage_System_V1.exe.config
+C:\Users\holbech\Desktop\P4 Project\IGEN_Storage_System_V1\IGEN_Storage_System_V1\bin\Debug\IGEN_Storage_System_V1.exe
+C:\Users\holbech\Desktop\P4 Project\IGEN_Storage_System_V1\IGEN_Storage_System_V1\bin\Debug\IGEN_Storage_System_V1.pdb
+C:\Users\holbech\Desktop\P4 Project\IGEN_Storage_System_V1\IGEN_Storage_System_V1\obj\Debug\IGEN_Storage_System_V1.csprojResolveAssemblyReference.cache
+C:\Users\holbech\Desktop\P4 Project\IGEN_Storage_System_V1\IGEN_Storage_System_V1\obj\Debug\IGEN_Storage_System_V1.Properties.Resources.resources
+C:\Users\holbech\Desktop\P4 Project\IGEN_Storage_System_V1\IGEN_Storage_System_V1\obj\Debug\IGEN_Storage_System_V1.csproj.GenerateResource.Cache
+C:\Users\holbech\Desktop\P4 Project\IGEN_Storage_System_V1\IGEN_Storage_System_V1\obj\Debug\IGEN_Storage_System_V1.exe
+C:\Users\holbech\Desktop\P4 Project\IGEN_Storage_System_V1\IGEN_Storage_System_V1\obj\Debug\IGEN_Storage_System_V1.pdb
+C:\Users\holbech\Desktop\P4 Project\IGEN_Storage_System_V1\IGEN_Storage_System_V1\obj\Debug\IGEN_Storage_System_V1.UserInterface.resources
