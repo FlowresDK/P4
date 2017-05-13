@@ -13,12 +13,13 @@ namespace IGEN_Storage_System_V1
         public int Price { get; set; }
         public string Comment { get; set; }
         private int NumberOfPrints;
+        private SqlConnection SqlConn;
         private List<Item> SelectedItems; // List to be used with SelectItem-methods
         public List<Item> ListOfAllItems;//Just a test list, DO NOT retrieve all items from database. 
 
         public Item()
         {
-
+            SqlConn = new SqlConnection();
         }
 
         public void RegisterItem()
@@ -27,12 +28,11 @@ namespace IGEN_Storage_System_V1
         }
 
         public void DeleteItem(List<Item> ItemsToDelete)
-        {
-            var sqlConn = new SqlConnection();
+        {           
             foreach(var item in SelectedItems )
             {
                 var itemID = item.ItemID;
-                sqlConn.ExecuteSQL("DELETE FROM item WHERE itemID ="+ itemID );//Check query-string upon implementation
+                SqlConn.ExecuteSQL("DELETE FROM item WHERE itemID ="+ itemID );//Check query-string upon implementation
             }
 
             SelectedItems = null;//clears the list, so that it is ready for next usages.
