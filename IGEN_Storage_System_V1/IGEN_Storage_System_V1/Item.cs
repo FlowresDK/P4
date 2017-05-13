@@ -13,8 +13,8 @@ namespace IGEN_Storage_System_V1
         public int Price { get; set; }
         public string Comment { get; set; }
         private int NumberOfPrints;
-
-
+        private List<Item> SelectedItems; // List to be used with SelectItem-methods
+        public List<Item> ListOfAllItems;//Just a test list, DO NOT retrieve all items from database. 
 
         public Item()
         {
@@ -26,9 +26,16 @@ namespace IGEN_Storage_System_V1
 
         }
 
-        public void DeleteItem()
+        public void DeleteItem(List<Item> ItemsToDelete)
         {
+            var sqlConn = new SqlConnection();
+            foreach(var item in SelectedItems )
+            {
+                var itemID = item.ItemID;
+                sqlConn.ExecuteSQL("DELETE FROM item WHERE itemID ="+ itemID );//Check query-string upon implementation
+            }
 
+            SelectedItems = null;//clears the list, so that it is ready for next usages.
         }
 
         public void SellItem()
@@ -40,6 +47,26 @@ namespace IGEN_Storage_System_V1
         {
 
         }
+
+        //
+        //Method for adding/removing item to list with scanner - to be used when moving/discarding/selling items.
+        //
+        public void SelectItem(int choosenItemID)
+        { 
+            var itemToChoose = ListOfAllItems[ListOfAllItems.FindIndex(item => item.ItemID == choosenItemID)];//some SQL her instead
+            if (!SelectedItems.Exists(item => item.ItemID == choosenItemID))
+            {
+                SelectedItems.Add(itemToChoose);
+            }
+
+            else
+            {
+                SelectedItems.RemoveAll(item => item.ItemID == choosenItemID);
+            }
+
+        }
+
+        
 
     }
 }
