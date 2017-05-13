@@ -16,7 +16,7 @@ namespace IGEN_Storage_System_V1
 
         public void CheckItemActivity()
         {
-
+            //Basically the same as clean-methods under extensions. But cannot be done with current ExecuteSQL-methods.
         }
     }
 }
