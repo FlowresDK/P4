@@ -8,7 +8,9 @@ using System.Threading.Tasks;
 namespace IGEN_Storage_System_V1
 {
     class Extension
-    {
+    { 
+        private SqlConnection SqlConn new SqlConnection();
+
         public void Print1() //TODO - Find better name
         {
         }
@@ -27,6 +29,9 @@ namespace IGEN_Storage_System_V1
 
         public void CleanGiverRegistry()
         {
+            var cutOfDate = DateTime.Today.AddDays(-365);
+
+            SqlConn.ExecuteSQL("DELETE FROM giver WHERE giver_reg_date < " + cutOfDate);//Cheeck query-string upon implementation
         }
 
         public void CleanItemRegistry()
