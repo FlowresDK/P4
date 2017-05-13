@@ -40,6 +40,9 @@ namespace IGEN_Storage_System_V1
 
         public void CleanItemActionLog()
         {
+            var cutOfDate = DateTime.Today.AddDays(-365);
+
+            SqlConn.ExecuteSQL("DELETE FROM item_action_log WHERE log_date < " + cutOfDate);//Cheeck query-string upon implementation
         }
     }
 }
