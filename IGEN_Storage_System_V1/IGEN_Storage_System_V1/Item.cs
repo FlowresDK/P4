@@ -14,7 +14,7 @@ namespace IGEN_Storage_System_V1
         public string Comment { get; set; }
         private int NumberOfPrints;
         private SqlConnection SqlConn;
-        private List<Item> SelectedItems; // List to be used with SelectItem-methods
+        Public List<Item> SelectedItems{ get; set; } // List to be used with SelectItem-methods
         public List<Item> ListOfAllItems;//Just a test list, DO NOT retrieve all items from database. 
 
         public Item()
@@ -29,13 +29,11 @@ namespace IGEN_Storage_System_V1
 
         public void DeleteItem(int userID)
         {
-
             foreach (var item in SelectedItems)
             {               
                 SqlConn.ExecuteSQL("DELETE FROM item WHERE itemID = " + item.ItemID);//Cheeck query-string upon implementation
                 SqlConn.ExecuteSQL("INSERT INTO itemAction(Actiontype, State, UserID) VALUES(Item moved, Item discarded" + "," + userID);//Check query-string upon implementation
-			}
-
+	    }
             SelectedItems = null;//clears the list, so that it is ready for next usages.
         }
 
@@ -46,22 +44,20 @@ namespace IGEN_Storage_System_V1
 
         public void MoveItem(int locationID, int userID)
         {
-			foreach (var item in SelectedItems)
+	    foreach (var item in SelectedItems)
             { 
                 SqlConn.ExecuteSQL("UPDATE item SET location = " +  locationID + "WHERE itemID = " + item.ItemID);//Check query-string upon implementation
                 SqlConn.ExecuteSQL("INSERT INTO itemAction(Actiontype, State, UserID) VALUES(Item moved," + locationID + "," + userID);//Check query-string upon implementation
                 		
-			}
-
-			SelectedItems = null;//clears the list, so that it is ready for next usages.
-		}
+	    }
+	    SelectedItems = null;//clears the list, so that it is ready for next usages.
+	}
 
         //
         //Method for adding/removing item to list with scanner - to be used when moving/discarding/selling items.
         //
         public void SelectItem(int choosenItemID)
-        { 
-            
+        {             
             var itemToChoose = ListOfAllItems[ListOfAllItems.FindIndex(item => item.ItemID == choosenItemID)];//some SQL her instead
             //perhaps var itemToChoose = SqlConn(SELECT * FROM item WHERE itemID = choosenItemID)
             if (!SelectedItems.Exists(item => item.ItemID == choosenItemID))
