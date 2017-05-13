@@ -27,13 +27,14 @@ namespace IGEN_Storage_System_V1
 
         }
 
-        public void DeleteItem(List<Item> ItemsToDelete)
-        {           
-            foreach(var item in SelectedItems )
-            {
-                var itemID = item.ItemID;
-                SqlConn.ExecuteSQL("DELETE FROM item WHERE itemID ="+ itemID );//Check query-string upon implementation
-            }
+        public void DeleteItem(int userID)
+        {
+
+            foreach (var item in SelectedItems)
+            {               
+                SqlConn.ExecuteSQL("DELETE FROM item WHERE itemID = " + item.ItemID);//Cheeck query-string upon implementation
+                SqlConn.ExecuteSQL("INSERT INTO itemAction(Actiontype, State, UserID) VALUES(Item moved, Item discarded" + "," + userID);//Check query-string upon implementation
+			}
 
             SelectedItems = null;//clears the list, so that it is ready for next usages.
         }
@@ -43,17 +44,26 @@ namespace IGEN_Storage_System_V1
 
         }
 
-        public void MoveItem()
+        public void MoveItem(int locationID, int userID)
         {
+			foreach (var item in SelectedItems)
+            { 
+                SqlConn.ExecuteSQL("UPDATE item SET location = " +  locationID + "WHERE itemID = " + item.ItemID);//Check query-string upon implementation
+                SqlConn.ExecuteSQL("INSERT INTO itemAction(Actiontype, State, UserID) VALUES(Item moved," + locationID + "," + userID);//Check query-string upon implementation
+                		
+			}
 
-        }
+			SelectedItems = null;//clears the list, so that it is ready for next usages.
+		}
 
         //
         //Method for adding/removing item to list with scanner - to be used when moving/discarding/selling items.
         //
         public void SelectItem(int choosenItemID)
         { 
+            
             var itemToChoose = ListOfAllItems[ListOfAllItems.FindIndex(item => item.ItemID == choosenItemID)];//some SQL her instead
+            //perhaps var itemToChoose = SqlConn(SELECT * FROM item WHERE itemID = choosenItemID)
             if (!SelectedItems.Exists(item => item.ItemID == choosenItemID))
             {
                 SelectedItems.Add(itemToChoose);
