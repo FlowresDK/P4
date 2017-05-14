@@ -62,6 +62,7 @@ namespace IGEN_Storage_System_V1
             //perhaps var itemToChoose = SqlConn(SELECT * FROM item WHERE itemID = choosenItemID)
             if (!SelectedItems.Exists(item => item.ItemID == choosenItemID))
             {
+		    //SQL query here SELECT ..... itemId
                 SelectedItems.Add(itemToChoose);
             }
 
