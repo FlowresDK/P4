@@ -9,7 +9,7 @@ namespace IGEN_Storage_System_V1
     class SqlConnection
     {
 
-        private void ExecuteSQL(string query)
+        public void ExecuteSQL(string query)
 		{
 			SqlCommand cmd = new SqlCommand();
 			cmd.CommandType = CommandType.Text;
@@ -20,5 +20,26 @@ namespace IGEN_Storage_System_V1
 			cmd.ExecuteNonQuery();
 			sqlConn.Close();
 		}
+	    
+	 public Item RetrieveItem(string query)//To be done
+	 {
+	 		
+		 
+		 return item
+	 }
+	    
+	 public User RetrieveItem(string query)//To be done
+	 {
+	 		
+		 
+		 return user
+	 }
+	    
+	 public Giver RetrieveItem(string query)//To be done
+	 {
+	 		
+		 
+		 return giver
+	 }
     }
 }
