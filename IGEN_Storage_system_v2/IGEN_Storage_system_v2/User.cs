@@ -6,76 +6,61 @@ using System.Threading.Tasks;
 
 namespace IGEN_Storage_system_v2
 {
-    class User
+   public class User
     {
+        public int UserID {get; set;} 
+        public string FirstName {get; set;} 
+        public string LastName {get; set;} 
+        public int PhoneNumber {get; set}
+        public string Mail {get; set}
+        public string SteetName {get; set;} 
+        public string CityName {get; set;} 
+        public int ZipCode{get; set;} 
+        public int Role {get;set;}
+        public int Rights {get;set;}
+       
+        public User(int userID, string firstName, string lastName, int phoneNumber, string mail, string streetName, string cityName, int zipCode, int role, int rights)
+        {
+            UserID = userID;
+            FirstName = firstName;
+            LastName = lastName;
+            PhoneNumber = phoneNumber;
+            Mail = mail;
+            StreetName = streetName;
+            ZipCode = zipCode;
+            Role = role;
+            Rights = rights;
+        }
 
-        public int ItemID { get; set; }
-        public int Category { get; set; }
-        public int Price { get; set; }
-        public string Comment { get; set; }
-        private int NumberOfPrints;
+        //User UserToCheck = new User();
 
-        public List<Item> SelectedItems{ get; set; } // List to be used with SelectItem-methods
-        public List<Item> ListOfAllItems;//Just a test list, DO NOT retrieve all items from database. 
+		public void CheckRights(int userIdToCheck)
+		{
+            User UserToCheck = new User();
+            UserToCheck = SqlConn("SELECT * FROM user WHERE userID = " + userIdToCheck);
+			if (userToCheck.)
 
-        public void RegisterItem()
+		}
 
+        public void CreateUser()
+        {
+            
+        }
+
+        public void DeleteUser()
         {
         }
 
-        public void DeleteItem(int userID)
+        public void SearchUser()
         {
-            foreach (var item in SelectedItems)
-            {               
-                SqlConnector.ExecuteSQL("DELETE FROM item WHERE itemID = " + item.ItemID);//Cheeck query-string upon implementation
-                SqlConnector.ExecuteSQL("INSERT INTO itemAction(Actiontype, State, UserID) VALUES(Item moved, Item discarded" + "," + userID);//Check query-string upon implementation
-	        }
-
-            SelectedItems = null;//clears the list, so that it is ready for next usages.
+        }
+ 
+        public void EditUser()
+        {
         }
 
-        public void SellItem()
+        public void ListUser()
         {
-
-        }
-
-        public void MoveItem(int locationID, int userID)
-
-        {
-	    foreach (var item in SelectedItems)
-
-            { 
-                SqlConnector.ExecuteSQL("UPDATE item SET location = " +  locationID + "WHERE itemID = " + item.ItemID);//Check query-string upon implementation
-                SqlConnector.ExecuteSQL("INSERT INTO itemAction(Actiontype, State, UserID) VALUES(Item moved," + locationID + "," + userID);//Check query-string upon implementation                	
-	        }
-
-	    SelectedItems = null;//clears the list, so that it is ready for next usages.
-	    }
-
-        //
-
-        //Method for adding/removing item to list with scanner - to be used when moving/discarding/selling items.
-
-        //
-
-        public void SelectItem(int choosenItemID)
-
-        {             
-            var itemToChoose = ListOfAllItems[ListOfAllItems.FindIndex(item => item.ItemID == choosenItemID)];//some SQL her instead
-            //perhaps var itemToChoose = SqlConn(SELECT * FROM item WHERE itemID = choosenItemID)
-
-            if (!SelectedItems.Exists(item => item.ItemID == choosenItemID))
-            {
-		    //SQL query here SELECT ..... itemId
-                SelectedItems.Add(itemToChoose);
-            }
-
-            else
-
-            {
-                SelectedItems.RemoveAll(item => item.ItemID == choosenItemID);
-            }
-
         }
     }
 }
