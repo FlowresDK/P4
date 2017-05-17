@@ -11,8 +11,8 @@ namespace IGEN_Storage_system_v2
         public int UserID {get; set;} 
         public string FirstName {get; set;} 
         public string LastName {get; set;} 
-        public int PhoneNumber {get; set}
-        public string Mail {get; set}
+        public int PhoneNumber {get; set;}
+        public string Mail {get; set;}
         public string SteetName {get; set;} 
         public string CityName {get; set;} 
         public int ZipCode{get; set;} 
