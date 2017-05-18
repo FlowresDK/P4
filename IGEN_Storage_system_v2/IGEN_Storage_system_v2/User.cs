@@ -32,15 +32,12 @@ namespace IGEN_Storage_system_v2
             Rights = rights;
         }
 
-        //User UserToCheck = new User();
+     
 
-		public void CheckRights(int userIdToCheck)
-		{
-            User UserToCheck = new User();
-            UserToCheck = SqlConn("SELECT * FROM user WHERE userID = " + userIdToCheck);
-			if (userToCheck.)
-
-		}
+	public void CheckRights(int userIdToCheck)
+	{
+         
+	}
 
         public void CreateUser()
         {
