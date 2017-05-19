@@ -30,7 +30,7 @@ namespace IGEN_Storage_system_v2
                 SqlConnector.ExecuteSQL("DELETE FROM item WHERE itemID = " + item.ItemID);//Cheeck query-string upon implementation
                 SqlConnector.ExecuteSQL("INSERT INTO itemAction(Actiontype, State, UserID) VALUES(Item moved, Item discarded" + "," + userID);//Check query-string upon implementation
             }
-            SelectedItemsList = null;//clears the list, so that it is ready for next usages.
+            SelectedItemsList.Clear();//clears the list, so that it is ready for next usages.
         }
 
         public void SellItem()
@@ -47,7 +47,7 @@ namespace IGEN_Storage_system_v2
                 SqlConnector.ExecuteSQL("INSERT INTO itemAction(Actiontype, State, UserID) VALUES(Item moved," + locationID + "," + userID);//Check query-string upon implementation
             }
 
-            SelectedItemsList = null;//clears the list, so that it is ready for next usages.
+            SelectedItemsList.Clear();//clears the list, so that it is ready for next usages.
         }
 
         //
