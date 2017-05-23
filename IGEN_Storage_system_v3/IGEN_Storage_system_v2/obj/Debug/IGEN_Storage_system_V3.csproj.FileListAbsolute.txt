@@ -1,0 +1,18 @@
+C:\Users\holbech\Desktop\P4 Project\IGEN_Storage_system_v2\IGEN_Storage_system_v2\bin\Debug\IGEN_Storage_system_v2.exe.config
+C:\Users\holbech\Desktop\P4 Project\IGEN_Storage_system_v2\IGEN_Storage_system_v2\bin\Debug\IGEN_Storage_system_v2.exe
+C:\Users\holbech\Desktop\P4 Project\IGEN_Storage_system_v2\IGEN_Storage_system_v2\bin\Debug\IGEN_Storage_system_v2.pdb
+C:\Users\holbech\Desktop\P4 Project\IGEN_Storage_system_v2\IGEN_Storage_system_v2\obj\Debug\IGEN_Storage_system_V3.csprojResolveAssemblyReference.cache
+C:\Users\holbech\Desktop\P4 Project\IGEN_Storage_system_v2\IGEN_Storage_system_v2\obj\Debug\IGEN_Storage_system_v2.UserInterface.resources
+C:\Users\holbech\Desktop\P4 Project\IGEN_Storage_system_v2\IGEN_Storage_system_v2\obj\Debug\IGEN_Storage_system_v2.Properties.Resources.resources
+C:\Users\holbech\Desktop\P4 Project\IGEN_Storage_system_v2\IGEN_Storage_system_v2\obj\Debug\IGEN_Storage_system_V3.csproj.GenerateResource.Cache
+C:\Users\holbech\Desktop\P4 Project\IGEN_Storage_system_v2\IGEN_Storage_system_v2\obj\Debug\IGEN_Storage_system_v2.exe
+C:\Users\holbech\Desktop\P4 Project\IGEN_Storage_system_v2\IGEN_Storage_system_v2\obj\Debug\IGEN_Storage_system_v2.pdb
+C:\Users\holbech\Google Drive\P4 Project\IGEN_Storage_system_v2\IGEN_Storage_system_v2\bin\Debug\IGEN_Storage_system_v2.exe.config
+C:\Users\holbech\Google Drive\P4 Project\IGEN_Storage_system_v2\IGEN_Storage_system_v2\bin\Debug\IGEN_Storage_system_v2.exe
+C:\Users\holbech\Google Drive\P4 Project\IGEN_Storage_system_v2\IGEN_Storage_system_v2\bin\Debug\IGEN_Storage_system_v2.pdb
+C:\Users\holbech\Google Drive\P4 Project\IGEN_Storage_system_v2\IGEN_Storage_system_v2\obj\Debug\IGEN_Storage_system_V3.csprojResolveAssemblyReference.cache
+C:\Users\holbech\Google Drive\P4 Project\IGEN_Storage_system_v2\IGEN_Storage_system_v2\obj\Debug\IGEN_Storage_system_v2.UserInterface.resources
+C:\Users\holbech\Google Drive\P4 Project\IGEN_Storage_system_v2\IGEN_Storage_system_v2\obj\Debug\IGEN_Storage_system_v2.Properties.Resources.resources
+C:\Users\holbech\Google Drive\P4 Project\IGEN_Storage_system_v2\IGEN_Storage_system_v2\obj\Debug\IGEN_Storage_system_V3.csproj.GenerateResource.Cache
+C:\Users\holbech\Google Drive\P4 Project\IGEN_Storage_system_v2\IGEN_Storage_system_v2\obj\Debug\IGEN_Storage_system_v2.exe
+C:\Users\holbech\Google Drive\P4 Project\IGEN_Storage_system_v2\IGEN_Storage_system_v2\obj\Debug\IGEN_Storage_system_v2.pdb
